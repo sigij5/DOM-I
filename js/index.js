@@ -38,6 +38,8 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+/* Nav */
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
@@ -49,6 +51,7 @@ for (let i = 0; i < allAnchors.length; i++) {
   allAnchors[i].textContent = anchors[i]
 }
 
+/* Header */
 
 const title = document.querySelector('h1')
 title.textContent = siteContent.cta['h1']
@@ -58,6 +61,8 @@ button.textContent = siteContent.cta['button']
 
 let ctaImage = document.getElementById('cta-img')
 ctaImage.setAttribute('src', siteContent.cta['img-src'])
+
+/* Main Content */
 
 let featuresHeader = document.querySelector('.top-content .text-content h4')
 featuresHeader.textContent = siteContent["main-content"]["features-h4"]
@@ -95,6 +100,8 @@ visionP.textContent = siteContent["main-content"]["vision-content"]
 let contactHeader = document.querySelector('.contact h4')
 contactHeader.textContent = siteContent.contact["contact-h4"]
 
+/* Bottom and Footer */
+
 let address = document.querySelector('.contact p:nth-of-type(1)')
 address.textContent = siteContent.contact.address
 
@@ -106,6 +113,9 @@ email.textContent = siteContent.contact.email
 
 let footer = document.querySelector('footer p')
 footer.textContent = siteContent.footer.copyright
+
+
+/* New nav items and colors */
 
 allAnchors.forEach(anchor => {
   anchor.style.color = 'green'
