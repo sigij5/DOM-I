@@ -38,5 +38,115 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+/* Nav */
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+let anchors = Object.values(siteContent.nav)
+let allAnchors = document.querySelectorAll('a')
+
+for (let i = 0; i < allAnchors.length; i++) {
+  allAnchors[i].textContent = anchors[i]
+}
+
+/* Header */
+
+const title = document.querySelector('h1')
+title.textContent = siteContent.cta['h1']
+
+let button = document.querySelector('button')
+button.textContent = siteContent.cta['button']
+
+let ctaImage = document.getElementById('cta-img')
+ctaImage.setAttribute('src', siteContent.cta['img-src'])
+
+/* Main Content */
+
+let featuresHeader = document.querySelector('.top-content .text-content h4')
+featuresHeader.textContent = siteContent["main-content"]["features-h4"]
+
+let featuresP = document.querySelector('.top-content .text-content p')
+featuresP.textContent = siteContent["main-content"]["features-content"]
+
+let aboutHeader = document.querySelector('.top-content .text-content:nth-of-type(2) h4')
+aboutHeader.textContent = siteContent["main-content"]["about-h4"]
+
+let aboutP = document.querySelector('.top-content .text-content:nth-of-type(2) p')
+aboutP.textContent = siteContent["main-content"]["features-content"]
+
+let midImage = document.getElementById('middle-img')
+midImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+let servicesHeader = document.querySelector('.bottom-content .text-content h4')
+servicesHeader.textContent = siteContent["main-content"]["services-h4"]
+
+let servicesP = document.querySelector('.bottom-content .text-content p')
+servicesP.textContent = siteContent["main-content"]["services-content"]
+
+let productHeader = document.querySelector('.bottom-content .text-content:nth-of-type(2) h4')
+productHeader.textContent = siteContent["main-content"]["product-h4"]
+
+let productP = document.querySelector('.bottom-content .text-content:nth-of-type(2) p')
+productP.textContent = siteContent["main-content"]["product-content"]
+
+let visionHeader = document.querySelector('.bottom-content .text-content:nth-of-type(3) h4')
+visionHeader.textContent = siteContent["main-content"]["vision-h4"]
+
+let visionP = document.querySelector('.bottom-content .text-content:nth-of-type(3) p')
+visionP.textContent = siteContent["main-content"]["vision-content"]
+
+let contactHeader = document.querySelector('.contact h4')
+contactHeader.textContent = siteContent.contact["contact-h4"]
+
+/* Bottom and Footer */
+
+let address = document.querySelector('.contact p:nth-of-type(1)')
+address.textContent = siteContent.contact.address
+
+let phone = document.querySelector('.contact p:nth-of-type(2)')
+phone.textContent = siteContent.contact.phone
+
+let email = document.querySelector('.contact p:nth-of-type(3)')
+email.textContent = siteContent.contact.email
+
+let footer = document.querySelector('footer p')
+footer.textContent = siteContent.footer.copyright
+
+
+/* New nav items and colors */
+
+allAnchors.forEach(anchor => {
+  anchor.style.color = 'green'
+})
+
+const nav = document.querySelector('nav')
+
+
+const newLinkOne = {
+  href: '#',
+  textContent: 'Location',
+}
+
+const newlink = document.createElement('a')
+
+newlink.href = newLinkOne.href
+newlink.textContent = newLinkOne.textContent
+
+nav.appendChild(newlink)
+
+const newLinkTwo = {
+  href: '#',
+  textContent: 'Home'
+}
+
+const newlinktwo = document.createElement('a')
+
+newlinktwo.href = newLinkTwo.href
+newlinktwo.textContent = newLinkTwo.textContent
+
+nav.prepend(newlinktwo)
+
+newlinktwo.style.color = 'green'
+newlink.style.color = 'green'
